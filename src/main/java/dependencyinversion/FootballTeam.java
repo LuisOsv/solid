@@ -4,15 +4,13 @@ import java.util.List;
 
 public class FootballTeam {
 
-    private List<Player> playerList;
+    private List<FootballPlayer> players;
 
-    public FootballTeam(List<Player> playerList){
-        this.playerList = playerList;
+    public FootballTeam(List<FootballPlayer> playerList){
+        this.players = playerList;
     }
 
     public void playFootball(){
-        playerList.forEach(
-                player -> player.play()
-        );
+        players.forEach(FootballPlayer::playSoccer);
     }
 }

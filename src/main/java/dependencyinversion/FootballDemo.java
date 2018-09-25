@@ -7,12 +7,12 @@ public class FootballDemo {
 
     public static void main(String[] args){
 
-        List<Player> players = new ArrayList<>();
-        players.add(new Goalkeeper());
-        players.add(new Defender());
-        players.add(new Midfielder());
-        players.add(new Forward());
-        FootballTeam footballTeam = new FootballTeam(players);
+        List<FootballPlayer> footballPlayers = new ArrayList<>();
+        footballPlayers.add(new Goalkeeper());
+        footballPlayers.add(new Defender());
+        footballPlayers.add(new Midfielder());
+        footballPlayers.add(new Forward());
+        FootballTeam footballTeam = new FootballTeam(footballPlayers);
         footballTeam.playFootball();
     }
 }

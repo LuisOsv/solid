@@ -1,8 +1,8 @@
 package dependencyinversion;
 
-public class Midfielder implements Player {
+public class Midfielder implements FootballPlayer {
     @Override
-    public void play() {
+    public void playSoccer() {
         maintainPossessionOfTheBall();
     }
 

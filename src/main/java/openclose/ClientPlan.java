@@ -1,10 +1,10 @@
 package openclose;
 
-public class Context {
+public class ClientPlan {
 
     private MobilePlan  mobilePlan;
 
-    public Context(MobilePlan mobilePlan){
+    public ClientPlan(MobilePlan mobilePlan){
         this.mobilePlan = mobilePlan;
     }
 

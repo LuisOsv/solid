@@ -4,15 +4,15 @@ public class MobilePlanDemo {
 
     public static void main(String [] args){
         System.out.println(" DAILY PLANS");
-        Context context = new Context(new Daily());
-        context.printPlans();
+        ClientPlan clientPlan = new ClientPlan(new DailyPlan());
+        clientPlan.printPlans();
 
         System.out.println(" WEEKLY PLANS");
-        context = new Context(new Weekly());
-        context.printPlans();
+        clientPlan = new ClientPlan(new WeeklyPlan());
+        clientPlan.printPlans();
 
         System.out.println(" MONTHLY PLANS");
-        context = new Context(new Monthly());
-        context.printPlans();
+        clientPlan = new ClientPlan(new MonthlyPlan());
+        clientPlan.printPlans();
     }
 }

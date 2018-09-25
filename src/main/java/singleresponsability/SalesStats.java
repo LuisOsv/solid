@@ -2,24 +2,24 @@ package singleresponsability;
 
 import java.util.Calendar;
 
-public class ViewSales {
+public class SalesStats {
 
-    public Double calculateSalesPerDay(Product product){
+    public static Double getSalesPerDayOfProduct(Product product){
         Calendar calendar = Calendar.getInstance();
         int monthMaxDays = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-        Double salesPerMonth = getTotalSalesPerMonth(product, calendar.get(Calendar.MONTH));
+        Double salesPerMonth = getTotalSalesPerMonthOfProduct(product, calendar.get(Calendar.MONTH));
         return salesPerMonth/monthMaxDays;
     }
 
-    public Double getTotalSalesPerMonth(Product product, int month) {
-        SalesManager salesManager = new SalesManager();
+    public static Double getTotalSalesPerMonthOfProduct(Product product, int month) {
+        SalesBuilder totalSales = new SalesBuilder();
         Calendar calendar = Calendar.getInstance();
         Double totalSalesPerMonth = 0.00;
 
-        for (Sales sales: salesManager.getSalesList()){
+        for (Sales sales: totalSales.getSalesOfProduct()){
             Product productInList = sales.getProduct();
 
-            if(productInList.getName() == product.getName()){
+            if(productInList.getName().equals(product.getName())){
                 calendar.setTime(sales.getSalesDate());
                 int monthOfProduct = calendar.get(Calendar.MONTH);
 

@@ -1,13 +1,13 @@
 package dependencyinversion;
 
-public class Defender implements Player {
+public class Defender implements FootballPlayer {
 
     @Override
-    public void play() {
-        preventGoal();
+    public void playSoccer() {
+        preventGoals();
     }
 
-    public void preventGoal() {
+    public void preventGoals() {
         System.out.println("Defender - Provide support to the team and prevent the opposition from scoring a goal");
     }
 }

@@ -3,7 +3,7 @@ package openclose;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Daily implements MobilePlan {
+public class DailyPlan implements MobilePlan {
 
     public static final String EXPIRATION_DATE = "24 hrs";
     public Map<String,String> availableOptions = new HashMap<String, String>();

@@ -1,13 +1,13 @@
 package dependencyinversion;
 
-public class Goalkeeper implements Player {
+public class Goalkeeper implements FootballPlayer {
 
     @Override
-    public void play() {
-        stopGoal();
+    public void playSoccer() {
+        stopGoals();
     }
 
-    public void stopGoal() {
+    public void stopGoals() {
         System.out.println("Goalkeeper - Stop the opposing team from scoring a goal");
     }
 }

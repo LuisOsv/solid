@@ -1,8 +1,8 @@
 package dependencyinversion;
 
-public class Forward implements Player {
+public class Forward implements FootballPlayer {
     @Override
-    public void play() {
+    public void playSoccer() {
         scoreGoals();
     }
 
